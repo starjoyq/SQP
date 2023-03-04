@@ -30,7 +30,7 @@ class sqAccount:
         
         for stock_item in self.stock:
             if(stock_item.stock_name not in market_prices.keys()):
-                print("없음 : {}".format(stock_item.stock_name))
+                print("ERROR:set_market_price : no market price. {}".format(stock_item.stock_name))
                 return False
             
             market_price = market_prices[stock_item.stock_name]
